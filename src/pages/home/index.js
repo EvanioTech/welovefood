@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { use } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
-
+import { useNavigation } from '@react-navigation/native';
 const Home = () => {
+    const navigation = useNavigation();
     return (
         <View style={styles.container}>
             <Image
             style={styles.img}
             source={require('../../images/logo.png')}
             />
-            <TouchableOpacity style={styles.btn}>
+            <TouchableOpacity style={styles.btn} onPress={()=>navigation.navigate('Menu')}>
             <Text style={styles.text}>Estou com fome!</Text>
             </TouchableOpacity>
             <StatusBar style="auto" />
