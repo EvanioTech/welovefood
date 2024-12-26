@@ -14,6 +14,7 @@ const Categorys = () => {
     return (
         <View style={styles.container}>
             <FlatList
+            showsHorizontalScrollIndicator = {false}
             horizontal = {true}
                 data={categorys}
                 keyExtractor={(item) => item.id}
@@ -28,7 +29,7 @@ const Categorys = () => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+       flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#fff',
@@ -42,6 +43,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#f0f0f0',
         margin: 5,
         borderRadius: 10,
+        
+        marginTop: 50,
+        height: 50,
     }
 });
 

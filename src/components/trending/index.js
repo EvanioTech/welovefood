@@ -34,7 +34,7 @@ const Trending = () => {
         <View style={styles.container}>
             <Text style={styles.text}>Mais Pedidos</Text>
             <FlatList 
-            
+            showsVerticalScrollIndicator = {false}
             data = {maisPedidos}
             keyExtractor={(item) => item.id}
             renderItem={({item}) => (
@@ -67,7 +67,7 @@ const Trending = () => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        flex: 2,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#fff',
