@@ -1,11 +1,18 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet,TouchableOpacity } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import { useNavigation } from '@react-navigation/native';
+import { Categorys } from '../../components/categorias';
+import { Trending } from '../../components/trending';
 
 const Menu = () => {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Menu</Text>
-            {/* Add your menu items here */}
+            <Categorys />
+            <Trending />
+            
+            <StatusBar style="auto" />
         </View>
     );
 };
