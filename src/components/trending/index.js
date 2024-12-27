@@ -87,6 +87,8 @@ const styles = StyleSheet.create({
     img: {
         width: 100,
         height: 100,
+        borderRadius: 50,
+        marginRight: 10,
     },
     card: {
         padding: 10,
@@ -94,6 +96,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         backgroundColor: '#f0f0f0',
         flexDirection: 'row',
+        alignItems: 'center',
         
     },
     textFim: {
