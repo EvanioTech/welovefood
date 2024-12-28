@@ -22,10 +22,10 @@ const Routes = () => {
         >
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="Menu" component={Menu} />
-            <Stack.Screen name="Drinks" component={Drinks} />
+            <Stack.Screen name="Bebidas" component={Drinks} />
             <Stack.Screen name="Pizzas" component={Pizzas} />
             <Stack.Screen name="Kalzones" component={Kalzones} />
-            <Stack.Screen name="Sandwiches" component={Sandwiches} />
+            <Stack.Screen name="Hamburgues" component={Sandwiches} />
             <Stack.Screen name="Sobremesas" component={Sobremesas} />
         </Stack.Navigator>
     );

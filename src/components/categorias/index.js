@@ -18,7 +18,7 @@ const Categorys = () => {
             horizontal = {true}
                 data={categorys}
                 keyExtractor={(item) => item.id}
-                renderItem={({item}) => (<TouchableOpacity style={styles.btnCat} onPress={() => navigation.navigate('Drinks')}>   
+                renderItem={({item}) => (<TouchableOpacity style={styles.btnCat} onPress={() => navigation.navigate(item.name)}>   
                     <Text style={styles.text}>{item.name}</Text>
                     </TouchableOpacity>
                 )}
