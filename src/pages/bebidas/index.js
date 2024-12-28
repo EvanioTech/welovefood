@@ -1,32 +1,60 @@
 import React, {useState} from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, FlatList, Image, TouchableOpacity } from 'react-native';
 
 const Drinks = () => {
     const [drinks, setDrinks] = useState([
-        {id: 1, name: 'Drink 1'},
-        {id: 2, name: 'Drink 2'},
-        {id: 3, name: 'Drink 3'},
-        {id: 4, name: 'Drink 4'},
-        {id: 5, name: 'Drink 5'},
-        {id: 6, name: 'Drink 6'},
-        {id: 7, name: 'Drink 7'},
-        {id: 8, name: 'Drink 8'},
-        {id: 9, name: 'Drink 9'},
-        {id: 10, name: 'Drink 10'},
-        {id: 11, name: 'Drink 11'},
-        {id: 12, name: 'Drink 12'},
-        {id: 13, name: 'Drink 13'},
-        {id: 14, name: 'Drink 14'},
-        {id: 15, name: 'Drink 15'},
-        {id: 16, name: 'Drink 16'},
-        {id: 17, name: 'Drink 17'},
-        {id: 18, name: 'Drink 18'},
-        {id: 19, name: 'Drink 19'},
-        {id: 20, name: 'Drink 20'},
+        {id: 1,
+             name: 'Coca-Cola 2L',
+            
+            price: 5.00,
+            img: 'https://bretas.vtexassets.com/arquivos/ids/192050-1200-auto?v=638375518430000000&width=1200&height=auto&aspect=true',
+            },
+            {id: 2,
+                name: 'Fanta laranja 2L',
+               
+               price: 5.00,
+               img: 'https://mercantilatacado.vtexassets.com/arquivos/ids/168754-800-auto?v=638342826918430000&width=800&height=auto&aspect=true',
+               },{id: 3,
+                name: 'Pepsi 1L',
+               
+               price: 5.00,
+               img: 'https://mercantilatacado.vtexassets.com/arquivos/ids/168664-800-auto?v=638342826763170000&width=800&height=auto&aspect=true',
+               },{id: 4,
+                name: 'Coca-Cola Lata 350ml',
+               
+               price: 5.00,
+               img: 'https://mercantilatacado.vtexassets.com/arquivos/ids/168690-800-auto?v=638342826764230000&width=800&height=auto&aspect=true',
+               },{id: 5,
+                name: 'Pepsi Lata 350ml',
+               
+               price: 5.00,
+               img: 'https://mercantilatacado.vtexassets.com/arquivos/ids/168739-800-auto?v=638342826767700000&width=800&height=auto&aspect=true',
+               },{id: 6,
+                name: 'Fanta Laranja Lata 220ml',
+               
+               price: 5.00,
+               img: 'https://mercantilatacado.vtexassets.com/arquivos/ids/168679-800-auto?v=638342826764100000&width=800&height=auto&aspect=true',
+               },
     ]);
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Bebidas Component</Text>
+            <Text style={styles.textTitle}>Bebidas</Text>
+            <FlatList
+                showsVerticalScrollIndicator={false}
+                data={drinks}
+                keyExtractor={(item) => item.id.toString()}
+                renderItem={({item}) => (
+                    <View style={styles.card}>
+                        <TouchableOpacity></TouchableOpacity>
+                        <Text style={styles.text}>{item.name}</Text>
+                        <Text style={styles.text}>R$ {item.price}</Text>
+                        <Image source={{uri: item.img}} style={{width: 200, height: 200}} />
+                        <TouchableOpacity style={styles.btn} onPress={() => {alert('item adicionado!')}}>
+                            <Text style={styles.textbtn}>Adicionar</Text>
+                        </TouchableOpacity>
+                    </View>
+                )}
+            />
         </View>
     );
 };
@@ -37,10 +65,25 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#fff',
+        padding: 20,
+        
     },
-    text: {
-        fontSize: 20,
+    textTitle: {
+        fontSize: 40,
         color: '#000',
+        marginTop: 50,
+        marginBottom: 20,
+    },
+    btn:{
+        backgroundColor: 'blue',
+        padding: 5,
+        borderRadius: 5,
+        marginTop: 10,
+        alignItems: 'center',
+    },
+    textbtn: {
+        color: '#fff',
+        fontSize: 20,
     },
 });
 

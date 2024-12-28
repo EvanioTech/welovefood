@@ -4,11 +4,17 @@ import { StatusBar } from 'expo-status-bar';
 import { useNavigation } from '@react-navigation/native';
 import { Categorys } from '../../components/categorias';
 import { Trending } from '../../components/trending';
+import { Feather } from '@expo/vector-icons'
 
 const Menu = () => {
     return (
         <View style={styles.container}>
+            <View style={styles.containerMenu}>
             <Text style={styles.title}>Menu</Text>
+            <TouchableOpacity style={styles.btn} onPress={() => {alert('Carrinho')}}>
+            <Feather name="shopping-cart" size={30} color="#000" />
+            </TouchableOpacity>
+            </View>
             <Categorys />
             <Trending />
             
@@ -23,11 +29,26 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#fff',
+        
     },
     title: {
         fontSize: 24,
         fontWeight: 'bold',
         marginTop: 100,
+    },
+    containerMenu: {
+        
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        width: '95%',
+        alignItems: 'center',
+    },
+    btn: {
+        
+        
+        marginTop: 90,
+        alignItems: 'center',
     },
 });
 
