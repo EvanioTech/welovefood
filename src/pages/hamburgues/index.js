@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { View, Text, StyleSheet,TouchableOpacity,Image, FlatList} from 'react-native';
 
 const Sandwiches = () => {
-    const [pizzas, setPizzas] = useState([
+    const [hamburgues, setHamburgues] = useState([
         {id: 1,
             name: 'Hamburguer de Picanha',
             description: 'Pão de hamburguer, picanha, queijo, alface, tomate, cebola, maionese e ketchup.',
@@ -27,10 +27,10 @@ const Sandwiches = () => {
     ]);
     return (
         <View style={styles.container}>
-            <Text style={styles.textTitle}>Pizzas</Text>
+            <Text style={styles.textTitle}>Hamburgues</Text>
             <FlatList
                 showsVerticalScrollIndicator={false}
-                data={pizzas}
+                data={hamburgues}
                 keyExtractor={(item) => item.id.toString()}
                 renderItem={({item}) => (
                     <View style={styles.card}>
