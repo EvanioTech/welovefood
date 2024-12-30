@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { View, Text, StyleSheet, FlatList, TouchableOpacity, Image } from 'react-native';
 
 const Sobremesas = () => {
-    const [hamburgues, setHamburgues] = useState([
+    const [Sobremesas, setSobremesas] = useState([
         {   id: 1,
             name: 'Pudim de Leite',
            description: 'Pudim de leite condensado com calda de caramelo.',
@@ -23,7 +23,7 @@ const Sobremesas = () => {
                 name: 'Cheesecake de Morango',
                 description: 'Base de biscoito crocante com creme suave de cream cheese, coberto com uma generosa camada de calda de morango.',
                price: 35.00,
-               img: 'https://www.minhareceita.com.br/app/uploads/2023/07/x-calabre-destaque-1.jpg',
+               img: 'https://www.receiteria.com.br/wp-content/uploads/cheesecake-de-morango-facil.jpeg',
                },
     ]);
     return (
@@ -31,7 +31,7 @@ const Sobremesas = () => {
             <Text style={styles.textTitle}>Sobremesas</Text>
             <FlatList
                 showsVerticalScrollIndicator={false}
-                data={hamburgues}
+                data={Sobremesas}
                 keyExtractor={(item) => item.id.toString()}
                 renderItem={({item}) => (
                     <View style={styles.card}>

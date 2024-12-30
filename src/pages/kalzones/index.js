@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { View, Text, StyleSheet, FlatList, TouchableOpacity, Image } from 'react-native';
 
 const Kalzones = () => {
-    const [hamburgues, setHamburgues] = useState([
+    const [kalzones, setKalzones] = useState([
         {   id: 1,
             name: 'Kalzone de Filé Mignon',
             description: 'Molho de tomate, mussarela, filé mignon, cebola, azeitona, orégano e azeite.',
@@ -30,7 +30,7 @@ const Kalzones = () => {
             <Text style={styles.textTitle}>Kalzones</Text>
             <FlatList
                 showsVerticalScrollIndicator={false}
-                data={hamburgues}
+                data={kalzones}
                 keyExtractor={(item) => item.id.toString()}
                 renderItem={({item}) => (
                     <View style={styles.card}>
