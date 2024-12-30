@@ -6,28 +6,28 @@ const Drinks = () => {
         {id: 1,
              name: 'Coca-Cola 2L',
             
-            price: 5.00,
+            price: 15.00,
             img: 'https://bretas.vtexassets.com/arquivos/ids/192050-1200-auto?v=638375518430000000&width=1200&height=auto&aspect=true',
             },
             {id: 2,
                 name: 'Fanta laranja 2L',
                
-               price: 5.00,
+               price: 12.00,
                img: 'https://mercantilatacado.vtexassets.com/arquivos/ids/168754-800-auto?v=638342826918430000&width=800&height=auto&aspect=true',
                },{id: 3,
                 name: 'Pepsi 1L',
                
-               price: 5.00,
+               price: 10.00,
                img: 'https://mercantilatacado.vtexassets.com/arquivos/ids/168664-800-auto?v=638342826763170000&width=800&height=auto&aspect=true',
                },{id: 4,
                 name: 'Coca-Cola Lata 350ml',
                
-               price: 5.00,
+               price: 8.00,
                img: 'https://mercantilatacado.vtexassets.com/arquivos/ids/168690-800-auto?v=638342826764230000&width=800&height=auto&aspect=true',
                },{id: 5,
                 name: 'Pepsi Lata 350ml',
                
-               price: 5.00,
+               price: 7.00,
                img: 'https://mercantilatacado.vtexassets.com/arquivos/ids/168739-800-auto?v=638342826767700000&width=800&height=auto&aspect=true',
                },{id: 6,
                 name: 'Fanta Laranja Lata 220ml',
