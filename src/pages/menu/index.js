@@ -30,9 +30,9 @@ const Menu = () => {
               <Text style={styles.modalText}>Meus Pedidos!</Text>
               <Text>Seu carrinho está vázio!</Text>
             <TouchableOpacity
-                style={[styles.btn, styles.buttonClose]}
+                style={[styles.btn]}
                 onPress={() => setModalVisible(!modalVisible)}>
-                <Text style={{backgroundColor: 'red'}}>X</Text>
+                <Text style={{backgroundColor: 'red',padding: 5, borderRadius: 15}}>X</Text>
               </TouchableOpacity>
               </View>
               </View>
@@ -112,6 +112,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
       },
       modalText: {
+        
         fontSize: 30,
         marginBottom: 55,
         textAlign: 'center',
