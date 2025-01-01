@@ -32,7 +32,7 @@ const Trending = () => {
     ]);
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Mais Pedidos</Text>
+            <Text style={styles.textTitle}>Mais Pedidos</Text>
             <FlatList 
             showsVerticalScrollIndicator = {false}
             data = {maisPedidos}
@@ -43,7 +43,7 @@ const Trending = () => {
                     <Image style={styles.img} source={{uri: item.image}} />
                     <View style={styles.containerView}>
                     <Text style={styles.text}>{item.name}</Text>
-                    <Text style={styles.text}>{item.description}</Text>
+                    <Text style={styles.textDesc}>{item.description}</Text>
                     <Text style={styles.text}>{item.price}</Text>
                     
                     </View>
@@ -81,6 +81,8 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
     },
     text: {
+        fontWeight: 'bold',
+       padding: 10,
         fontSize: 20,
         color: '#000',
     },
@@ -93,7 +95,7 @@ const styles = StyleSheet.create({
     card: {
         padding: 10,
         margin: 5,
-        borderRadius: 10,
+        borderRadius: 20,
         backgroundColor: '#f0f0f0',
         flexDirection: 'row',
         alignItems: 'center',
@@ -103,7 +105,18 @@ const styles = StyleSheet.create({
         fontSize: 20,
         color: '#000',
         
-    }
+    },
+    textDesc: {
+        fontSize: 15,
+        color: '#000',
+    },
+    textTitle: {
+        fontSize: 30,
+        color: '#000',
+        marginTop: 50,
+        marginBottom: 20,
+        fontWeight: 'bold',
+    },
 });
 
 export {Trending};
